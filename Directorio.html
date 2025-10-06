@@ -1,0 +1,810 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Tribunal Electoral del Estado de Aguascalientes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+        .megamenu {
+            position: static;
+        }
+
+            .megamenu .dropdown-menu {
+                background: none;
+                border: none;
+                width: 100%;
+            }
+
+        body {
+            background-color: white;
+            background-size: cover;
+            background-repeat: repeat;
+            font-family: "Karla", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        code {
+            color: #745eb1;
+            background: #fff;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.2rem;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.08em;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        .imagen-hover {
+            width: 60px;
+            transition: transform 0.6s ease; /* transición suave */
+        }
+
+            .imagen-hover:hover {
+                transform: scale(1.2) rotate(15deg); /* agranda + gira */
+            }
+
+        .custom-box {
+            border: 1px solid #183859;
+            border-radius: 15px;
+            min-height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .left-box {
+            min-height: 320px;
+        }
+
+        .mi-link {
+            color: #CCCCCC;
+            font-size: 9pt;
+        }
+
+            .mi-link:hover {
+                color: #41658D;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+        h6 {
+            color: #183859;
+            font-size: 10pt;
+        }
+
+        .nombres {
+            color: #183859;
+            font-size: 12pt;
+        }
+
+        footer {
+            background-color: #111827;
+            padding: 10px 5px;
+            color: white;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .footer-box {
+            background: #FFF;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+            .footer-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+                background: linear-gradient(to right, #7B848C, #CCD3D9);
+                font-weight: 900;
+                color: #FFF;
+            }
+
+            .footer-box a {
+                font-size: 16px;
+            }
+
+                .footer-box a:hover {
+                    font-size: 16px;
+                }
+
+            .footer-box span {
+                font-size: 8.5pt;
+                font-weight: 700;
+                color: #000;
+            }
+
+                .footer-box span:hover {
+                    font-size: 10px;
+                    font-weight: 900;
+                    color: #FFF;
+                }
+
+        /* Créditos */
+        .footer-credit {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #d1d5db;
+        }
+
+        .container-menu {
+            background: linear-gradient(to bottom, #183859, #4187CC);
+        }
+
+        .container-menu-obscuro {
+            background: #183859;
+            text-align: center;
+        }
+
+        .navbar-menu {
+            background: linear-gradient(to bottom, #183859, #4187CC);
+        }
+
+        ul li a:hover {
+            background-color: #B0A6A0; /* color de fondo al pasar el mouse */
+            color: #183859; /* color del texto al pasar el mouse */
+            border-radius: 5px; /* opcional, para que se vea redondeado */
+        }
+
+        .left-box:hover {
+            background-color: #66a3ff; /* cambia de color */
+            transform: scale(1.1); /* aumenta tamaño un 10% */
+        }
+
+        .fs-1 {
+            color: white;
+        }
+    </style>
+    <style>
+        .icono-container {
+            position: fixed; /* Fija el elemento a la ventana */
+            top: 220px; /* 100px desde la parte superior de la ventana */
+            left: 88%; /* 90% desde la parte izquierda de la ventana */
+            width: 50px; /* Ancho deseado */
+            height: 50px; /* Alto deseado */
+            z-index: 100; /* Asegura que el icono esté por encima de otros elementos */
+        }
+
+        .imagen-animada {
+            width: 150px; /* ajusta el tamaño de la imagen */
+            position: relative;
+            animation: mover 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes mover {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100px); /* se moverá 100px a la derecha */
+            }
+        }
+    </style>
+    <style>
+        .social-icon svg {
+            width: 27px; /* tamaño uniforme */
+            height: 27px; /* tamaño uniforme */
+        }
+
+        .navbar-navRedes {
+            display: flex;
+            flex-direction: column; /* los pone en columna (vertical) */
+            align-items: center; /* centra los íconos horizontalmente */
+            gap: 10px; /* espacio entre íconos */
+        }
+    </style>
+    <style>
+        /* Contenedor alineado a la derecha */
+        .buscador {
+            display: flex;
+            justify-content: flex-end; /* manda a la derecha */
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+        }
+
+            /* Input */
+            .buscador input {
+                padding: 8px 12px;
+                border: 2px solid #B0A6A0; /* color institucional, lo puedes cambiar */
+                border-radius: 20px;
+                outline: none;
+                transition: all 0.3s ease;
+            }
+
+                .buscador input:focus {
+                    border-color: #0080ff;
+                    box-shadow: 0 0 8px rgba(0,128,255,0.5);
+                }
+
+        /* Botón con animación */
+        .btn-buscar {
+            background-color: #B0A6A0;
+            color: #fff;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            .btn-buscar:hover {
+                background-color: #0080ff;
+                transform: scale(1.2) rotate(10deg); /* zoom + ligero giro */
+            }
+    </style>
+</head>
+<body className='snippet-body' style="font-family: 'Karla', sans-serif">
+    <div class="container-menu-obscuro col-md-12">
+        <a class="navbar-brand" href="Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo" height="120"></a>
+    </div>
+    <div class="container-menu col-md-12">
+        <nav class="navbar navbar-menu navbar-expand-lg navbar-light py-3 shadow-sm">
+
+            <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown megamenu">
+                        <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold" style="color: white;">Nosotros</a>
+                        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
+                            <div class="container">
+                                <div class="row bg-white rounded-0 m-0 shadow-sm">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="p-4">
+                                            <div class="row" style="text-align: center;">
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/category/tribunal/quienes-somos-y-que-hacemos/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Proposito.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Propósito</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="Pleno.html" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Pleno.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Pleno</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="Ponencias.html" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Ponencias.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Ponencias</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="EstructuraOrganica.html" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Organigrama.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Estructura Orgánica</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="Directorio.html" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Directorio.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Directorio</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold" style="color: white;">Asuntos</a>
+                        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
+                            <div class="container">
+                                <div class="row bg-white rounded-0 m-0 shadow-sm">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="p-4">
+                                            <div class="row" style="text-align: center;">
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/category/pleno/sesiones-publicas/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Sesiones.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Sesiones públicas</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="#" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Sentencias.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Sentencias</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/category/estrados-electronicos/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Expedientes.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Expedientes</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="#" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/AsuntosInstruccion.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Asuntos en Instrucción</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="#" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Impugnaciones.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Impugnaciones Federales</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold" style="color: white;">Estrados Electrónicos</a>
+                        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
+                            <div class="container">
+                                <div class="row bg-white rounded-0 m-0 shadow-sm">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="p-4">
+                                            <div class="row" style="text-align: center;">
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/lista-de-acuerdos/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/NotificacionesDia.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Notificaciones del día </h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/lista-de-acuerdos/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Acuerdos.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Acuerdos</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="#" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Convocatorias.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Convocatorias a Sesiones Públicas</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Sentencias.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Sentencias</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="#" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Acuerdos.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Acuerdos de Pleno</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold" style="color: white;">Legislación</a>
+                        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
+                            <div class="container">
+                                <div class="row bg-white rounded-0 m-0 shadow-sm">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="p-4">
+                                            <div class="row" style="text-align: center;">
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/category/legislacion-y-jurisprudencia/marco-normativo/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/MarcoNormativo.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Marco Normativo</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold" style="color: white;">Comunicación Social</a>
+                        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
+                            <div class="container">
+                                <div class="row bg-white rounded-0 m-0 shadow-sm">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="p-4">
+                                            <div class="row" style="text-align: center;">
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/boletines-de-prensa-por-ano/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Boletines.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Boletines</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold" style="color: white;">Transparencia</a>
+                        <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
+                            <div class="container">
+                                <div class="row bg-white rounded-0 m-0 shadow-sm">
+                                    <div class="col-lg-12 col-xl-12">
+                                        <div class="p-4">
+                                            <div class="row" style="text-align: center;">
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/obligaciones-comunes-y-especificas/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/Expedientes.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Información Pública de Oficio</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/ProteccionDatos.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Protección de Datos Personales</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://teeags.mx/transparencia-que-es-una-solicitud-informacion/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/AccesoInformacion.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Solicitudes de Acceso a la Información</h6>
+                                                </div>
+                                                <div class="col-lg-2 mb-4">
+                                                    <ul class="list-unstyled">
+                                                        <li class="nav-item"><a href="https://www.plataformadetransparencia.org.mx/auth/login?returUrl=%2Faplicaciones" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/PNT.png" /></a></li>
+                                                    </ul>
+                                                    <h6 class="font-weight-bold">Plataforma Nacional de Transparencia</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-navRedes d-flex flex-row" style="list-style: none;">
+                    <!-- Icons -->
+                    <li class="nav-item me-3 me-lg-0">
+                        <a href="https://www.facebook.com/Teea.Ags#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook fs-1">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a href="https://x.com/TriEE_Ags" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter fs-1">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a href="https://www.instagram.com/teea_ags/?igsh=ZW9ibWdrb2V1OGE5#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram fs-1">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a href="https://www.youtube.com/channel/UCut_aU0ApGfP1S8gowiXbTA" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube fs-1">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope fs-1">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+                <button class="btn-buscar">🔍</button>
+            </div>
+        </nav>
+    </div>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <script type='text/javascript'>
+        var myLink = document.querySelector('a[href="#"]');
+        myLink.addEventListener('click', function (e) {
+            e.preventDefault();
+        });
+    </script>
+    <section>
+        <div class="icono-container">
+            <img src="images/Justino/MascotaTribunalElectoral-01.png" alt="Imagen pequeña" class="imagen-animada" width="150" height="150">
+        </div>
+        <script>
+            const imagenes = ["images/Justino/MascotaTribunalElectoral-01.png", "images/Justino/MascotaTribunalElectoral-02.png", "images/Justino/MascotaTribunalElectoral-04.png"];
+            let indice = 0;
+
+            setInterval(() => {
+                indice = (indice + 1) % imagenes.length;
+                document.getElementById("imagenRotativa").src = imagenes[indice];
+            }, 3000); // cambia cada 3 segundos
+        </script>
+    </section>
+
+    <section>
+        <div class="col-md-12 my-5" style="text-align: center;">
+            <div class="card my-5" style="width: 100%; text-align: center;">
+                <div class="card-body" style="width: 95%">
+                    <h5 class="card-title">TRIBUNAL ELECTORAL DEL ESTADO DE AGUASCALIENTES</h5>
+                    <p class="card-text">Domicilio</p>
+                    <p class="card-text"><address>Calle Juan de Montoro #407 Col. Centro C.P. 20000</address></p>
+                    <p class="card-text">Teléfonos y Conmutador</p>
+                    <p class="card-text">(449) 916 1427 /916 1417  / 916 1217</p>
+                </div>
+            </div>
+            <table class="table table-hover" style="width: 95%">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Puesto</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Primer Apellido</th>
+                        <th scope="col">Segundo Apellido</th>
+                        <th scope="col">Extensión</th>
+                        <th scope="col">Correo electrónico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Secretaría General de Acuerdos</td>
+                        <td>Guadalupe Jocelyn</td>
+                        <td>Martinez</td>
+                        <td>Tavarez</td>
+                        <td>104</td>
+                        <td><a href="mailto:jocelyn_mtz@teeags.mx">jocelyn_mtz@teeags.mx</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Oficialía de Partes</td>
+                        <td>Mina</td>
+                        <td>Jiménez</td>
+                        <td>Sevilla</td>
+                        <td>101</td>
+                        <td><a href="mailto:minajimenez@teeags.mx">minajimenez@teeags.mx</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Actuaría</td>
+                        <td>Zaira Noelia</td>
+                        <td>Márquez</td>
+                        <td>Pérez</td>
+                        <td>101</td>
+                        <td><a href="mailto:zairamarquez@teeags.mx">zairamarquez@teeags.mx</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Contraloría</td>
+                        <td>Elizabeth</td>
+                        <td>Zúñiga</td>
+                        <td>Díaz</td>
+                        <td>122</td>
+                        <td><a href="mailto:elizabethzuniga@teeags.mx">elizabethzuniga@teeags.mx</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Dirección Administrativa</td>
+                        <td>Armando Salvador</td>
+                        <td>Martín</td>
+                        <td>Martínez</td>
+                        <td>113</td>
+                        <td><a href="mailto:salvadormartin@teeags.mx">salvadormartin@teeags.mx</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Jefatura Administrativa</td>
+                        <td>Marcela</td>
+                        <td>Urzúa</td>
+                        <td>Cuevas</td>
+                        <td>103</td>
+                        <td><a href="mailto:marcela_urzua@teeags.mx">marcela_urzua@teeags.mx</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td> Auxiliar de Recursos Financieros</td>
+                        <td>Benjamín</td>
+                        <td>Urzúa</td>
+                        <td>Salas</td>
+                        <td>103</td>
+                        <td><a href="mailto:benjaminurzua@teeags.mx">benjaminurzua@teeags.mx</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="mailto:"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="col-md-12 col-lg-12">
+        <!-- Footer -->
+        <footer class="footer pt-5">
+            <div class="container text-center text-md-start col-md-10">
+                <div class="row">
+                    <!-- Footer content -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Oficinas</h6>
+                        <p style="color: white; font-size: 11pt;">
+                            Juan de Montoro # 407
+                            Col. Centro, C.P. 20000
+                            Aguascalientes, Ags.
+                            contacto@teeags.mx
+                        </p>
+                        <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Horario</h6>
+                        <p style="color: white; font-size: 11pt;">
+                            Lunes a Viernes
+                            09:00 - 15:30 horas
+                        </p>
+                        <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Contáctanos</h6>
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Footer links (x5 columnas) -->
+                    <div class="col-md-9 mb-6">
+                        <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Sitios de Interés</h6>
+                        <div class="footer-container">
+                            <div class="footer-box">
+                                <a href="https://www.scjn.gob.mx/" target="_blank">
+                                    <span> Suprema Corte de Justicia de la Nación</span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://web.diputados.gob.mx/inicio" target="_blank">
+                                    <span>Cámara de Diputados </span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://fgr.org.mx/swb/fisel" target="_blank">
+                                    <span>FISEL </span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://www.te.gob.mx/srm/" target="_blank">
+                                    <span style="font-size: 7.5pt;">Tribunal Electoral / Sala Regional Monterrey </span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://ine.mx/" target="_blank">
+                                    <span>Instituto Nacional Electoral </span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://www.ieeags.mx/" target="_blank">
+                                    <span style="font-size: 8pt;"> Instituto Estatal Electoral Aguascalientes</span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://congresoags.gob.mx/" target="_blank">
+                                    <span> Congreso de Estado de Aguascalientes</span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://www.plataformadetransparencia.org.mx/Inicio" target="_blank">
+                                    <span>Plataforma de Transparencia </span>
+                                </a>
+                            </div>
+                            <div class="footer-box" style="text-align: left;">
+                                <a href="https://www.facebook.com/p/Fiscal%C3%ADa-Especializada-en-Delitos-Electorales-de-Aguascalientes-100071352164046/" target="_blank">
+                                    <span>Fiscalía Especializada en Delitos Electorales Aguascalientes </span>
+                                </a>
+                            </div>
+                            <div class="footer-box" style="text-align: left;">
+                                <a href="https://www.te.gob.mx/" target="_blank">
+                                    <span>Tribunal Electoral del Poder Judicial de la Federación </span>
+                                </a>
+                            </div>
+                            <div class="footer-box">
+                                <a href="https://sicje.te.gob.mx/Alfonsina/" target="_blank">
+                                    <span>Alfonsina </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+
+                <!-- Social media -->
+                <div class="text-center mb-4">
+                    <a href="https://www.facebook.com/Teea.Ags#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+                    <a href="https://x.com/TriEE_Ags" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/teea_ags/?igsh=ZW9ibWdrb2V1OGE5#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCut_aU0ApGfP1S8gowiXbTA" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Copyright -->
+                <div class="text-center pb-4">
+                    © 2025 Copyright: <a href="#" class="text-white text-decoration-none">TEEA.mx</a>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+
+</body>
+</html>
