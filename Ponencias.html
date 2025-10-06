@@ -48,7 +48,7 @@
             background-color: white;
             background-size: cover;
             background-repeat: repeat;
-            font-family: "Karla", sans-serif;
+            font-family: Arial, Helvetica, sans-serif, "Karla";
             margin: 0;
             padding: 0;
         }
@@ -292,6 +292,7 @@
             margin-top: 40px;
         }
 
+        /* Cada tarjeta de persona */
         .item {
             width: 27%;
             max-width: 350px;
@@ -301,7 +302,7 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.1);
             padding: 15px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
             .item:hover {
@@ -310,15 +311,24 @@
                 border-color: #d0d0d0;
             }
 
+            /* 👇 AQUÍ está el ajuste importante */
             .item img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 10px;
-                border: 3px solid #ddd;
+                width: 250px; /* tamaño máximo */
+                height: 250px; /* proporción 1:1 */
+                max-width: 300px; /* límite superior */
+                object-fit: cover; /* recorta sin deformar */
+                border-radius: 50%; /* hace la imagen redonda */
+                border: 4px solid #ddd; /* borde suave */
+                transition: transform 0.3s ease;
+                margin-bottom: 10px;
             }
 
+                .item img:hover {
+                    transform: scale(1.08);
+                }
+
             .item h5 {
-                margin-top: 15px;
+                margin-top: 10px;
                 font-weight: 600;
                 color: #333;
             }
@@ -352,6 +362,7 @@
                 max-width: 400px;
             }
         }
+
     </style>
 </head>
 <body className='snippet-body' style="font-family: 'Karla', sans-serif">
