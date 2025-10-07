@@ -202,7 +202,7 @@
     <style>
         .icono-container {
             position: fixed; /* Fija el elemento a la ventana */
-            top: 220px; /* 100px desde la parte superior de la ventana */
+            top: 230px; /* 100px desde la parte superior de la ventana */
             left: 88%; /* 90% desde la parte izquierda de la ventana */
             width: 50px; /* Ancho deseado */
             height: 50px; /* Alto deseado */
@@ -223,6 +223,12 @@
             to {
                 transform: translateX(100px); /* se moverá 100px a la derecha */
             }
+        }
+
+        video {
+            width: 250px;
+            height: auto;
+            display: block;
         }
     </style>
     <style>
@@ -361,7 +367,7 @@
 </head>
 <body className='snippet-body' style="font-family: 'Open Sans', Arial, sans-serif">
     <div class="container-menu-obscuro col-md-12">
-        <a class="navbar-brand" href="Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo" height="120"></a>
+        <a class="navbar-brand" href="https://tribunalelectoralagsoficial-crypto.github.io/TEEA/Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo" height="120"></a>
     </div>
     <div class="container-menu col-md-12">
         <nav class="navbar navbar-menu navbar-expand-lg navbar-light py-3 shadow-sm">
@@ -642,17 +648,11 @@
     </script>
     <section>
         <div class="icono-container">
-            <img src="images/Justino/MascotaTribunalElectoral-01.png" alt="Imagen pequeña" class="imagen-animada" width="150" height="150">
+            <video autoplay muted loop controls>
+                <source src="Videos/Justino1.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
         </div>
-        <script>
-            const imagenes = ["images/Justino/MascotaTribunalElectoral-01.png", "images/Justino/MascotaTribunalElectoral-02.png", "images/Justino/MascotaTribunalElectoral-04.png"];
-            let indice = 0;
-
-            setInterval(() => {
-                indice = (indice + 1) % imagenes.length;
-                document.getElementById("imagenRotativa").src = imagenes[indice];
-            }, 3000); // cambia cada 3 segundos
-        </script>
     </section>
 
     <section>
@@ -676,7 +676,7 @@
                         <img src="images/Ponencias/MtroVictor.jpg" alt="Mtro. Víctor">
                     </div>
                     <p class="nombres">
-                        Mtro. Víctor Miguel Dávila Leal
+                        Mtro. Víctor Miguel Dávila <br /> Leal
                     </p>
                     <p class="reseña">
                         Secretario de Estudio
@@ -696,7 +696,7 @@
                         <img src="images/Ponencias/LicLauraSusana.jpg" alt="Imagen 1">
                     </div>
                     <p class="nombres">
-                        Lic. Laura Susana Arias Medel
+                        Lic. Laura Susana Arias <br /> Medel
                     </p>
                     <p class="reseña">
                         Auxiliar Jurídico
@@ -731,7 +731,7 @@
                         <img src="images/Ponencias/LicDenisse.jpg" alt="Imagen 1">
                     </div>
                     <p class="nombres">
-                        Lic. Denisse Paola Esquivel Ortega
+                        Lic. Denisse Paola Esquivel <br /> Ortega
                     </p>
                     <p class="reseña">
                         Secretaria Jurídica
@@ -741,7 +741,7 @@
                         <img src="images/Ponencias/LindaMiroslava.jpg" alt="Imagen 1">
                     </div>
                     <p class="nombres">
-                        Lindy Miroslava García Ochoa
+                        Lindy Miroslava García <br /> Ochoa
                     </p>
                     <p class="reseña">
                         Auxiliar Jurídico
@@ -766,7 +766,7 @@
                         <img src="images/Ponencias/LicCristian.jpg" alt="Imagen 1">
                     </div>
                     <p class="nombres">
-                        Lic. Cristian Jesús Velasco Martínez
+                        Lic. Cristian Jesús Velasco <br /> Martínez
                     </p>
                     <p class="reseña">
                         Secretario de Estudio
@@ -776,7 +776,7 @@
                         <img src="images/Ponencias/LicErika.jpg" alt="Imagen 1">
                     </div>
                     <p class="nombres">
-                        Lic. Ericka Ivette Rodríguez Martínez
+                        Lic. Ericka Ivette Rodríguez<br /> Martínez
                     </p>
                     <p class="reseña">
                         Secretaria Jurídica
@@ -784,6 +784,7 @@
                 </div>
             </div>
         </div>
+        <br />
     </section>
 
     <div class="col-md-12 col-lg-12">
