@@ -311,17 +311,22 @@
             }
 
         .portarretrato {
-            border: 8px solid #fff; /* Marco blanco */
-            outline: 3px solid #888; /* Línea gris oscuro externa */
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Sombra elegante */
-            border-radius: 10px; /* Bordes redondeados */
-            overflow: hidden; /* Para que la imagen no se salga */
+            border: 8px solid #fff;
+            outline: 3px solid #888;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
             margin-bottom: 12px;
+            /* 🔹 Centramos imagen vertical y horizontalmente */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 280px; /* puedes ajustar según el tamaño de tus íconos */
         }
 
             .portarretrato img {
                 width: 50%;
-                height: 50%;
+                height: auto;
                 display: block;
             }
 
@@ -342,11 +347,18 @@
             border-radius: 6px;
             cursor: pointer;
             transition: background 0.3s;
+            text-decoration: none;
         }
 
             .boton:hover {
                 background: #005fa3;
             }
+
+        @media (max-width: 992px) {
+            .item {
+                width: 40%;
+            }
+        }
 
         @media (max-width: 768px) {
             .item {
