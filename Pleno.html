@@ -46,7 +46,7 @@
             font-family: "Open Sans", Arial, Helvetica, sans-serif;
             margin: 0;
             text-align: center;
-            padding: 40px;
+            padding: 0px;
         }
 
         code {
@@ -145,11 +145,11 @@
             }
 
             .footer-box a {
-                font-size: 16px;
+                font-size: 8pt;
             }
 
                 .footer-box a:hover {
-                    font-size: 16px;
+                    font-size: 10pt;
                 }
 
             .footer-box span {
@@ -159,7 +159,7 @@
             }
 
                 .footer-box span:hover {
-                    font-size: 10px;
+                    font-size: 8pt;
                     font-weight: 900;
                     color: #FFF;
                 }
@@ -301,7 +301,7 @@
 
         .nombre {
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             background-color: #e9ecef;
             display: inline-block;
             padding: 8px 12px;
@@ -320,11 +320,11 @@
         }
     </style>
 </head>
-<body className='snippet-body' style="font-family: 'Karla', sans-serif">
-    <div class="container-menu-obscuro col-md-12">
+<body className='snippet-body' style="font-family: 'Open Sans', Arial, sans-serif">
+    <div class="container-menu-obscuro col-md-12 col-lg-12">
         <a class="navbar-brand" href="Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo" height="120"></a>
     </div>
-    <div class="container-menu col-md-12">
+    <div class="container-menu col-md-12 col-lg-12">
         <nav class="navbar navbar-menu navbar-expand-lg navbar-light py-3 shadow-sm">
 
             <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
@@ -605,15 +605,6 @@
         <div class="icono-container">
             <img src="images/Justino/MascotaTribunalElectoral-01.png" alt="Imagen pequeña" class="imagen-animada" width="150" height="150">
         </div>
-        <script>
-            const imagenes = ["images/Justino/MascotaTribunalElectoral-01.png", "images/Justino/MascotaTribunalElectoral-02.png", "images/Justino/MascotaTribunalElectoral-04.png"];
-            let indice = 0;
-
-            setInterval(() => {
-                indice = (indice + 1) % imagenes.length;
-                document.getElementById("imagenRotativa").src = imagenes[indice];
-            }, 3000); // cambia cada 3 segundos
-        </script>
     </section>
     <section>
         <div class="magistrado">
@@ -651,14 +642,14 @@
                     <!-- Footer content -->
                     <div class="col-md-3 mb-4">
                         <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Oficinas</h6>
-                        <p style="color: white; font-size: 11pt;">
+                        <p style="color: white; font-size: 10pt;">
                             Juan de Montoro # 407
                             Col. Centro, C.P. 20000
                             Aguascalientes, Ags.
                             contacto@teeags.mx
                         </p>
                         <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Horario</h6>
-                        <p style="color: white; font-size: 11pt;">
+                        <p style="color: white; font-size: 10pt;">
                             Lunes a Viernes
                             09:00 - 15:30 horas
                         </p>
@@ -691,7 +682,7 @@
                             </div>
                             <div class="footer-box">
                                 <a href="https://www.te.gob.mx/srm/" target="_blank">
-                                    <span style="font-size: 7.5pt;">Tribunal Electoral / Sala Regional Monterrey </span>
+                                    <span>Tribunal Electoral / Sala Regional Monterrey </span>
                                 </a>
                             </div>
                             <div class="footer-box">
@@ -701,7 +692,7 @@
                             </div>
                             <div class="footer-box">
                                 <a href="https://www.ieeags.mx/" target="_blank">
-                                    <span style="font-size: 8pt;"> Instituto Estatal Electoral Aguascalientes</span>
+                                    <span> Instituto Estatal Electoral Aguascalientes</span>
                                 </a>
                             </div>
                             <div class="footer-box">
@@ -714,7 +705,7 @@
                                     <span>Plataforma de Transparencia </span>
                                 </a>
                             </div>
-                            <div class="footer-box" style="text-align: left;">
+                            <div class="footer-box">
                                 <a href="https://www.facebook.com/p/Fiscal%C3%ADa-Especializada-en-Delitos-Electorales-de-Aguascalientes-100071352164046/" target="_blank">
                                     <span>Fiscalía Especializada en Delitos Electorales Aguascalientes </span>
                                 </a>
