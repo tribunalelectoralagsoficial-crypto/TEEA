@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         ::-webkit-scrollbar {
             width: 8px;
@@ -246,6 +243,15 @@
             align-items: center; /* centra los íconos horizontalmente */
             gap: 10px; /* espacio entre íconos */
         }
+        .navbar-texto-redes {
+            position: absolute;
+            right: 8%; /* lo coloca al 25% desde el borde derecho */
+            top: 80%; /* centra verticalmente dentro del navbar */
+            transform: translateY(-50%); /* ajusta el centrado vertical */
+            color: white;
+            font-weight: bold;
+            z-index: 10;
+        }
     </style>
     <style>
         /* Contenedor alineado a la derecha */
@@ -371,6 +377,9 @@
 <body className='snippet-body' style="font-family: 'Karla', sans-serif">
     <div class="container-menu-obscuro col-md-12">
         <a class="navbar-brand" href="https://tribunalelectoralagsoficial-crypto.github.io/TEEA/Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="" height="120"></a>
+        <div class="navbar-texto-redes ms-auto" style="color: white; font-weight: bold; margin-right: 10px; text-transform: uppercase; font-size: 13pt;">
+            Justicia que Legitima la Democracia
+        </div>
     </div>
     <div class="container-menu col-md-12">
         <nav class="navbar navbar-menu navbar-expand-lg navbar-light py-3 shadow-sm">
