@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         ::-webkit-scrollbar {
             width: 8px;
@@ -335,6 +338,16 @@
             align-items: center; /* centra los íconos horizontalmente */
             gap: 10px; /* espacio entre íconos */
         }
+
+        .navbar-texto-redes {
+            position: absolute;
+            right: 10%; /* lo coloca al 25% desde el borde derecho */
+            top: 80%; /* centra verticalmente dentro del navbar */
+            transform: translateY(-50%); /* ajusta el centrado vertical */
+            color: white;
+            font-weight: bold;
+            z-index: 10;
+        }
     </style>
     <style>
         /* Contenedor alineado a la derecha */
@@ -424,12 +437,24 @@
                 height: 250px;
             }
         }
+
+        .bebas-neue-regular {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 20pt;
+        }
+
     </style>
 </head>
 <body className='snippet-body' style="font-family: 'Open Sans', Arial, sans-serif">
-    <div class="container-menu-obscuro col-md-12">
+    <div class="container-menu-obscuro col-md-12 col-lg-12 col-sm-12">
         <a class="navbar-brand" href="https://tribunalelectoralagsoficial-crypto.github.io/TEEA/Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo TEEA" height="120"></a>
+        <div class="navbar-texto-redes ms-auto bebas-neue-regular" style="color: white; font-weight: bold; margin-right: 10px; text-transform: uppercase;">
+            Justicia que Legitima la Democracia
+        </div>
     </div>
+
     <div class="container-menu col-md-12">
         <nav class="navbar navbar-menu navbar-expand-lg navbar-light py-3 shadow-sm">
 
@@ -655,6 +680,7 @@
                         </div>
                     </li>
                 </ul>
+
                 <ul class="navbar-navRedes d-flex flex-row" style="list-style: none;">
                     <!-- Icons -->
                     <li class="nav-item me-3 me-lg-0">
