@@ -243,6 +243,15 @@
             align-items: center; /* centra los íconos horizontalmente */
             gap: 10px; /* espacio entre íconos */
         }
+        .navbar-texto-redes {
+            position: absolute;
+            right: 8%; /* lo coloca al 25% desde el borde derecho */
+            top: 80%; /* centra verticalmente dentro del navbar */
+            transform: translateY(-50%); /* ajusta el centrado vertical */
+            color: white;
+            font-weight: bold;
+            z-index: 10;
+        }
     </style>
     <style>
         /* Contenedor alineado a la derecha */
@@ -288,6 +297,9 @@
 <body className='snippet-body' style="font-family: 'Open Sans', Arial, sans-serif">
     <div class="container-menu-obscuro col-md-12">
         <a class="navbar-brand" href="https://tribunalelectoralagsoficial-crypto.github.io/TEEA/Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo" height="120"></a>
+        <div class="navbar-texto-redes ms-auto" style="color: white; font-weight: bold; margin-right: 10px; text-transform: uppercase; font-size: 13pt;">
+            Justicia que Legitima la Democracia
+        </div>
     </div>
     <div class="container-menu col-md-12">
         <nav class="navbar navbar-menu navbar-expand-lg navbar-light py-3 shadow-sm">
