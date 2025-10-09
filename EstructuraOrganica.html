@@ -257,22 +257,29 @@
         /* Contenedor alineado a la derecha */
         .buscador {
             display: flex;
-            justify-content: flex-end; /* manda a la derecha */
-            align-items: center;
-            gap: 8px;
+            justify-content: flex-end;
             padding: 10px 20px;
         }
 
+            /* Formulario interno */
+            .buscador form {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex-wrap: nowrap; /* Evita que se apilen en móviles */
+            }
+
             /* Input */
-            .buscador input {
+            .buscador input[type="text"] {
                 padding: 8px 12px;
-                border: 2px solid #B0A6A0; /* color institucional, lo puedes cambiar */
+                border: 2px solid #B0A6A0;
                 border-radius: 20px;
                 outline: none;
                 transition: all 0.3s ease;
+                font-size: 16px;
             }
 
-                .buscador input:focus {
+                .buscador input[type="text"]:focus {
                     border-color: #0080ff;
                     box-shadow: 0 0 8px rgba(0,128,255,0.5);
                 }
@@ -286,12 +293,23 @@
             border-radius: 50%;
             cursor: pointer;
             transition: transform 0.3s ease, background-color 0.3s ease;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
             .btn-buscar:hover {
                 background-color: #0080ff;
-                transform: scale(1.2) rotate(10deg); /* zoom + ligero giro */
+                transform: scale(1.2) rotate(10deg);
             }
+
+        /* Adaptación opcional para pantallas pequeñas */
+        @media (max-width: 480px) {
+            .buscador input[type="text"] {
+                width: 140px;
+            }
+        }
     </style>
 </head>
 <body className='snippet-body' style="font-family: 'Open Sans', Arial, sans-serif">
@@ -566,8 +584,11 @@
                 </ul>
             </div>
             <div class="buscador">
-                <input type="text" placeholder="Buscar...">
-                <button class="btn-buscar">🔍</button>
+                <form method="GET" action="https://www.google.com/search" target="_blank">
+                    <input type="text" name="q" placeholder="Buscar..." required>
+                    <button type="submit" class="btn-buscar">🔍</button>
+                    <input type="hidden" name="sitesearch" value="https://teeags.mx/">
+                </form>
             </div>
         </nav>
     </div>
