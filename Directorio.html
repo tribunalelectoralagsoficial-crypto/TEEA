@@ -175,11 +175,6 @@
             background: linear-gradient(to bottom, #183859, #4187CC);
         }
 
-        .container-menu-obscuro {
-            background: #183859;
-            text-align: center;
-        }
-
         .navbar-menu {
             background: linear-gradient(to bottom, #183859, #4187CC);
         }
@@ -243,15 +238,6 @@
             align-items: center; /* centra los íconos horizontalmente */
             gap: 10px; /* espacio entre íconos */
         }
-        .navbar-texto-redes {
-            position: absolute;
-            right: 8%; /* lo coloca al 25% desde el borde derecho */
-            top: 80%; /* centra verticalmente dentro del navbar */
-            transform: translateY(-50%); /* ajusta el centrado vertical */
-            color: white;
-            font-weight: bold;
-            z-index: 10;
-        }
     </style>
     <style>
         /* Contenedor alineado a la derecha */
@@ -308,6 +294,38 @@
         @media (max-width: 480px) {
             .buscador input[type="text"] {
                 width: 140px;
+            }
+        }
+    </style>
+    <style>
+        .container-menu-obscuro {
+            background: #183859;
+            text-align: center;
+            position: relative; /* necesario para posicionar el texto dentro */
+            padding: 20px 0;
+        }
+
+        /* Texto posicionado en pantallas grandes */
+        .navbar-texto-redes {
+            position: absolute;
+            right: 8%;
+            top: 80%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13pt;
+            z-index: 10;
+        }
+
+        /* Cuando la pantalla es pequeña (celular o tablet) */
+        @media (max-width: 768px) {
+            .navbar-texto-redes {
+                position: static; /* quita el posicionamiento absoluto */
+                transform: none;
+                display: block;
+                margin-top: 10px;
+                text-align: right; /* alinea a la derecha */
             }
         }
     </style>
@@ -520,13 +538,13 @@
                                                 </div>
                                                 <div class="col-lg-2 mb-4">
                                                     <ul class="list-unstyled">
-                                                        <li class="nav-item"><a href="" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/ProteccionDatos.png" /></a></li>
+                                                        <li class="nav-item"><a href="https://teeags.mx/datos-personales/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/ProteccionDatos.png" /></a></li>
                                                     </ul>
                                                     <h6 class="font-weight-bold">Protección de Datos Personales</h6>
                                                 </div>
                                                 <div class="col-lg-2 mb-4">
                                                     <ul class="list-unstyled">
-                                                        <li class="nav-item"><a href="https://teeags.mx/transparencia-que-es-una-solicitud-informacion/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/AccesoInformacion.png" /></a></li>
+                                                        <li class="nav-item"><a href="https://teeags.mx/transparencia_/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="images/Iconos/AccesoInformacion.png" /></a></li>
                                                     </ul>
                                                     <h6 class="font-weight-bold">Solicitudes de Acceso a la Información</h6>
                                                 </div>
