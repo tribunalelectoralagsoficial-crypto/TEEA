@@ -175,11 +175,6 @@
             background: linear-gradient(to bottom, #183859, #4187CC);
         }
 
-        .container-menu-obscuro {
-            background: #183859;
-            text-align: center;
-        }
-
         .navbar-menu {
             background: linear-gradient(to bottom, #183859, #4187CC);
         }
@@ -243,15 +238,7 @@
             align-items: center; /* centra los íconos horizontalmente */
             gap: 10px; /* espacio entre íconos */
         }
-        .navbar-texto-redes {
-            position: absolute;
-            right: 8%; /* lo coloca al 25% desde el borde derecho */
-            top: 80%; /* centra verticalmente dentro del navbar */
-            transform: translateY(-50%); /* ajusta el centrado vertical */
-            color: white;
-            font-weight: bold;
-            z-index: 10;
-        }
+
     </style>
     <style>
         /* Contenedor alineado a la derecha */
@@ -388,6 +375,39 @@
             .item {
                 width: 90%;
                 max-width: 400px;
+            }
+        }
+    </style>
+
+    <style>
+        .container-menu-obscuro {
+            background: #183859;
+            text-align: center;
+            position: relative; /* necesario para posicionar el texto dentro */
+            padding: 20px 0;
+        }
+
+        /* Texto posicionado en pantallas grandes */
+        .navbar-texto-redes {
+            position: absolute;
+            right: 8%;
+            top: 80%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13pt;
+            z-index: 10;
+        }
+
+        /* Cuando la pantalla es pequeña (celular o tablet) */
+        @media (max-width: 768px) {
+            .navbar-texto-redes {
+                position: static; /* quita el posicionamiento absoluto */
+                transform: none;
+                display: block;
+                margin-top: 10px;
+                text-align: right; /* alinea a la derecha */
             }
         }
     </style>
@@ -600,13 +620,13 @@
                                                 </div>
                                                 <div class="col-lg-2 mb-4">
                                                     <ul class="list-unstyled">
-                                                        <li class="nav-item"><a href="" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="http://teeags.mx/wp-content/uploads/2025/10/ProteccionDatos.png" /></a></li>
+                                                        <li class="nav-item"><a href="https://teeags.mx/datos-personales/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="http://teeags.mx/wp-content/uploads/2025/10/ProteccionDatos.png" /></a></li>
                                                     </ul>
                                                     <h6 class="font-weight-bold">Protección de Datos Personales</h6>
                                                 </div>
                                                 <div class="col-lg-2 mb-4">
                                                     <ul class="list-unstyled">
-                                                        <li class="nav-item"><a href="https://teeags.mx/transparencia-que-es-una-solicitud-informacion/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="http://teeags.mx/wp-content/uploads/2025/10/AccesoInformacion.png" /></a></li>
+                                                        <li class="nav-item"><a href="https://teeags.mx/transparencia_/" style="width: 60px; height: 60px;"><img class="img imagen-hover" src="http://teeags.mx/wp-content/uploads/2025/10/AccesoInformacion.png" /></a></li>
                                                     </ul>
                                                     <h6 class="font-weight-bold">Solicitudes de Acceso a la Información</h6>
                                                 </div>
@@ -750,7 +770,6 @@
                             Juan de Montoro # 407
                             Col. Centro, C.P. 20000
                             Aguascalientes, Ags.
-                            contacto@teeags.mx
                         </p>
                         <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Horario</h6>
                         <p style="color: white; font-size: 11pt;">
@@ -758,7 +777,7 @@
                             09:00 - 15:30 horas
                         </p>
                         <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Contáctanos</h6>
-                        <a href="#" class="social-icon">
+                        <a href="mailto:notificacionesteea@teeags.mx" class="social-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
                             </svg>

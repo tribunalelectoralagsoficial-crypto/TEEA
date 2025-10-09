@@ -7,12 +7,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/Logotipo_TEEA.ico" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <style>
         ::-webkit-scrollbar {
             width: 8px;
@@ -298,86 +298,6 @@
         }
     </style>
     <style>
-        .galeria {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        /* Cada tarjeta de persona */
-        .item {
-            width: 27%;
-            max-width: 350px;
-            background-color: #fff;
-            border: 4px solid #e0e0e0;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-            .item:hover {
-                transform: scale(1.03);
-                box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-                border-color: #d0d0d0;
-            }
-
-            /* 👇 AQUÍ está el ajuste importante */
-            .item img {
-                width: 250px; /* tamaño máximo */
-                height: 250px; /* proporción 1:1 */
-                max-width: 300px; /* límite superior */
-                object-fit: cover; /* recorta sin deformar */
-                border-radius: 50%; /* hace la imagen redonda */
-                border: 4px solid #ddd; /* borde suave */
-                transition: transform 0.3s ease;
-                margin-bottom: 10px;
-            }
-
-                .item img:hover {
-                    transform: scale(1.08);
-                }
-
-            .item h5 {
-                margin-top: 10px;
-                font-weight: 600;
-                color: #333;
-            }
-
-        .reseña {
-            font-size: 15px;
-            color: #444;
-            line-height: 1.5;
-        }
-
-        .boton {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 14px;
-            font-size: 14px;
-            color: #fff;
-            background: #0077cc;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-            .boton:hover {
-                background: #005fa3;
-            }
-
-        @media (max-width: 768px) {
-            .item {
-                width: 90%;
-                max-width: 400px;
-            }
-        }
-    </style>
-    <style>
         .container-menu-obscuro {
             background: #183859;
             text-align: center;
@@ -409,6 +329,38 @@
             }
         }
     </style>
+
+    <style>
+        .seccion-construccion {
+            text-align: center;
+            padding: 60px 20px;
+            background: #ffffff; /* mismo tono que tu sitio */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+
+            .seccion-construccion img {
+                width: 180px;
+                margin-bottom: 20px;
+                opacity: 0.95;
+                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            }
+
+            .seccion-construccion h1 {
+                font-weight: 700;
+                font-size: 2rem;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                color: #183859;
+            }
+
+            .seccion-construccion p {
+                color: #183859;
+                font-size: 1.1rem;
+            }
+    </style>
+
 </head>
 <body className='snippet-body' style="font-family: 'Open Sans', Arial, sans-serif">
     <div class="container-menu-obscuro col-md-12">
@@ -684,9 +636,8 @@
             <div class="buscador">
                 <form method="GET" action="https://www.google.com/search" target="_blank">
                     <input type="text" name="q" placeholder="Buscar..." required>
-                    <!-- Cambia este valor por el dominio de tu sitio -->
-                    <input type="hidden" name="sitesearch" value="https://teeags.mx/">
                     <button type="submit" class="btn-buscar">🔍</button>
+                    <input type="hidden" name="sitesearch" value="https://teeags.mx/">
                 </form>
             </div>
         </nav>
@@ -700,146 +651,21 @@
     </script>
     <section>
         <div class="icono-container">
-            <video autoplay muted loop controls>
-                <source src="Videos/Justino1.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
+            <img src="images/Justino/MascotaTribunalElectoral-01.png" alt="Imagen pequeña" class="imagen-animada" width="150" height="150">
         </div>
     </section>
 
     <section>
-        <div class="container">
-            <div class="galeria">
-                <div class="item">
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicHoracio.jpg" alt="Lic. Horacio">
-                    </div>
-                    <p class="reseña">
-                        Ponencia I
-                    </p>
-                    <p class="nombres">
-                        Lic. Horacio José Ricardo López Castañeda
-                    </p>
-                    <p class="reseña">
-                        Magistrado
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/MtroVictor.jpg" alt="Mtro. Víctor">
-                    </div>
-                    <p class="nombres">
-                        Mtro. Víctor Miguel Dávila <br /> Leal
-                    </p>
-                    <p class="reseña">
-                        Secretario de Estudio
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicClara.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="nombres">
-                        Lic. Clara Guadalupe Martínez Vázquez
-                    </p>
-                    <p class="reseña">
-                        Secretaria Jurídica
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicLauraSusana.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="nombres">
-                        Lic. Laura Susana Arias <br /> Medel
-                    </p>
-                    <p class="reseña">
-                        Auxiliar Jurídico
-                    </p>
-                </div>
-
-                <div class="item">
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicLaura.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="reseña">
-                        Ponencia II
-                    </p>
-                    <p class="nombres">
-                        Mtra. Laura Hortensia Llamas Hernández
-                    </p>
-                    <p class="reseña">
-                        Magistrada Presidenta
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/MtraZaira.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="nombres">
-                        Mtra. Zaira Alejandra Zarate Gaytán
-                    </p>
-                    <p class="reseña">
-                        Secretaria de Estudio
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicDenisse.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="nombres">
-                        Lic. Denisse Paola Esquivel <br /> Ortega
-                    </p>
-                    <p class="reseña">
-                        Secretaria Jurídica
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LindaMiroslava.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="nombres">
-                        Lindy Miroslava García <br /> Rocha
-                    </p>
-                    <p class="reseña">
-                        Auxiliar Jurídico
-                    </p>
-                </div>
-
-                <div class="item">
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicGuillermo.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="reseña">
-                        Ponencia III
-                    </p>
-                    <p class="nombres">
-                        Lic. Óscar Guillermo Montoya Contreras
-                    </p>
-                    <p class="reseña">
-                        Magistrado
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicCristian.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="nombres">
-                        Lic. Cristian Jesús Velasco <br /> Martínez
-                    </p>
-                    <p class="reseña">
-                        Secretario de Estudio
-                    </p>
-                    <br />
-                    <div class="portarretrato">
-                        <img src="images/Ponencias/LicErika.jpg" alt="Imagen 1">
-                    </div>
-                    <p class="nombres">
-                        Lic. Ericka Ivette Rodríguez<br /> Martínez
-                    </p>
-                    <p class="reseña">
-                        Secretaria Jurídica
-                    </p>
-                </div>
+        <div class="col-md-12 my-5">
+            <div class="seccion-construccion">
+                <img src="https://cdn-icons-png.flaticon.com/512/5956/5956583.png" alt="Página en construcción">
+                <h1>Sección en Construcción</h1>
+                <p>Estamos trabajando para ofrecerte una mejor experiencia. 🌟<br>Vuelve pronto para descubrir el nuevo contenido.</p>
             </div>
         </div>
-        <br />
     </section>
 
-    <div class="col-md-12 col-lg-12">
+    <div class="col-12 col-sm-6 col-lg-12">
         <!-- Footer -->
         <footer class="footer pt-5">
             <div class="container text-center text-md-start col-md-10">
