@@ -7,12 +7,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/Logotipo_TEEA.ico" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <style>
         ::-webkit-scrollbar {
             width: 8px;
@@ -104,6 +104,11 @@
             font-size: 10pt;
         }
 
+        .nombres {
+            color: #183859;
+            font-size: 12pt;
+        }
+
         footer {
             background-color: #111827;
             padding: 10px 5px;
@@ -185,26 +190,6 @@
             transform: scale(1.1); /* aumenta tamaño un 10% */
         }
 
-        .box-1:hover {
-            background-color: #7199D9; /* cambia de color */
-            transform: scale(1.1); /* aumenta tamaño un 10% */
-        }
-
-        .box-2:hover {
-            background-color: #A2C4F5; /* cambia de color */
-            transform: scale(1.1); /* aumenta tamaño un 10% */
-        }
-
-        .box-3:hover {
-            background-color: #E9F0FC; /* cambia de color */
-            transform: scale(1.1); /* aumenta tamaño un 10% */
-        }
-
-        .box-4:hover {
-            background-color: #6499E8; /* cambia de color */
-            transform: scale(1.1); /* aumenta tamaño un 10% */
-        }
-
         .fs-1 {
             color: white;
         }
@@ -239,97 +224,6 @@
             width: 250px;
             height: auto;
             display: block;
-        }
-    </style>
-    <style>
-        .carrusel {
-            position: relative;
-            width: 150px; /* ajusta ancho */
-            height: 150px; /* ajusta alto */
-            overflow: hidden;
-            margin: auto;
-            border-radius: 12px;
-        }
-
-        .carrusel-item {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            animation: fade 24s infinite; /* 7 imágenes × 7s = 49s */
-        }
-
-            .carrusel-item img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 12px;
-            }
-
-        @media (max-width: 576px) {
-            #carousel-item .carousel-item img {
-                width: 100%;
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            #carousel-item .carousel-item img {
-                width: 100%;
-                height: 350px;
-            }
-        }
-
-        /* Animación fade */
-        @keyframes fade {
-            0% {
-                opacity: 0;
-            }
-
-            8% {
-                opacity: 1;
-            }
-
-            20% {
-                opacity: 1;
-            }
-
-            28% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-        /* Ajuste de tiempo para cada imagen */
-        .carrusel-item:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .carrusel-item:nth-child(2) {
-            animation-delay: 4s;
-        }
-
-        .carrusel-item:nth-child(3) {
-            animation-delay: 8s;
-        }
-
-        .carrusel-item:nth-child(4) {
-            animation-delay: 12s;
-        }
-
-        .carrusel-item:nth-child(5) {
-            animation-delay: 16s;
-        }
-
-        .carrusel-item:nth-child(6) {
-            animation-delay: 20s;
-        }
-
-        .carrusel-item:nth-child(7) {
-            animation-delay: 24s;
         }
     </style>
     <style>
@@ -404,64 +298,6 @@
         }
     </style>
     <style>
-        /* ====== Estilos del carrusel ====== */
-        #carousel {
-            margin-top: 0 !important;
-            display: flex;
-            justify-content: center; /* centra horizontalmente */
-        }
-
-            #carousel .carousel {
-                width: 80%; /* ancho del carrusel */
-                height: 800px; /* altura fija para escritorio */
-                overflow: hidden;
-                border-radius: 10px;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            }
-
-            #carousel .carousel-item img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* mantiene proporciones */
-            }
-
-        .custom-container {
-            width: 70%;
-            margin: 0 auto;
-        }
-
-        /* ====== Responsividad ====== */
-
-        @media (max-width: 1500px) {
-            #carousel .carousel {
-                width: 95%;
-                height: 550px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            #carousel .carousel {
-                width: 90%;
-                height: 400px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            #carousel .carousel {
-                width: 100%;
-                height: 300px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            #carousel .carousel {
-                width: 100%;
-                height: 250px;
-            }
-        }
-    </style>
-
-    <style>
         .container-menu-obscuro {
             background: #183859;
             text-align: center;
@@ -494,17 +330,45 @@
         }
     </style>
 
+    <style>
+        .seccion-construccion {
+            text-align: center;
+            padding: 60px 20px;
+            background: #ffffff; /* mismo tono que tu sitio */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+
+            .seccion-construccion img {
+                width: 180px;
+                margin-bottom: 20px;
+                opacity: 0.95;
+                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            }
+
+            .seccion-construccion h1 {
+                font-weight: 700;
+                font-size: 2rem;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                color: #183859;
+            }
+
+            .seccion-construccion p {
+                color: #183859;
+                font-size: 1.1rem;
+            }
+    </style>
+
 </head>
 <body className='snippet-body' style="font-family: 'Open Sans', Arial, sans-serif">
     <div class="container-menu-obscuro col-md-12">
-        <a class="navbar-brand" href="https://tribunalelectoralagsoficial-crypto.github.io/TEEA/Index.html">
-            <img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo" height="120">
-        </a>
-        <div class="navbar-texto-redes">
+        <a class="navbar-brand" href="https://tribunalelectoralagsoficial-crypto.github.io/TEEA/Index.html"><img src="images/Logo_TEEA_Bco_Horizontal.png" alt="Logo" height="120"></a>
+        <div class="navbar-texto-redes ms-auto" style="color: white; font-weight: bold; margin-right: 10px; text-transform: uppercase; font-size: 13pt;">
             Justicia que Legitima la Democracia
         </div>
     </div>
-
     <div class="container-menu col-md-12">
         <nav class="navbar navbar-menu navbar-expand-lg navbar-light py-3 shadow-sm">
 
@@ -730,7 +594,6 @@
                         </div>
                     </li>
                 </ul>
-
                 <ul class="navbar-navRedes d-flex flex-row" style="list-style: none;">
                     <!-- Icons -->
                     <li class="nav-item me-3 me-lg-0">
@@ -770,15 +633,11 @@
                     </li>
                 </ul>
             </div>
-
             <div class="buscador">
                 <form method="GET" action="https://www.google.com/search" target="_blank">
-                    <input type="text" name="q" placeholder="Buscar en el sitio..." required>
-
-                    <!-- CAMBIA ESTE VALOR POR TU DOMINIO -->
-                    <input type="hidden" name="sitesearch" value="tusitio.com">
-
-                    <button type="submit" class="btn-buscar" title="Buscar">🔍</button>
+                    <input type="text" name="q" placeholder="Buscar..." required>
+                    <button type="submit" class="btn-buscar">🔍</button>
+                    <input type="hidden" name="sitesearch" value="https://teeags.mx/">
                 </form>
             </div>
         </nav>
@@ -793,133 +652,20 @@
     <section>
         <div class="icono-container">
             <img src="images/Justino/MascotaTribunalElectoral-01.png" alt="Imagen pequeña" class="imagen-animada" width="150" height="150">
-            <!--  <video autoplay muted loop controls>
-                <source src="Videos/Justino1.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-            <img id="imagenRotativa" src="images/Justino/MascotaTribunalElectoral-01.png" alt="Rotativa" width="150">
-            <div class="carrusel">
-                <div class="carrusel-item fade"><img src="images/Justino/MascotaTribunalElectoral-01.png" alt="Imagen 1"></div>
-                <div class="carrusel-item fade"><img src="images/Justino/MascotaTribunalElectoral-02.png" alt="Imagen 2"></div>
-                <div class="carrusel-item fade"><img src="images/Justino/MascotaTribunalElectoral-03.png" alt="Imagen 3"></div>
-                <div class="carrusel-item fade"><img src="images/Justino/MascotaTribunalElectoral-04.png" alt="Imagen 4"></div>
-                <div class="carrusel-item fade"><img src="images/Justino/MascotaTribunalElectoral-05.png" alt="Imagen 5"></div>
-                <div class="carrusel-item fade"><img src="images/Justino/MascotaTribunalElectoral-06.png" alt="Imagen 6"></div>
-                <div class="carrusel-item fade"><img src="images/Justino/MascotaTribunalElectoral-07.png" alt="Imagen 7"></div>
-            </div>-->
-
         </div>
-        <!--   <script>
-            const imagenes = ["images/Justino/MascotaTribunalElectoral-01.png", "images/Justino/MascotaTribunalElectoral-02.png", "images/Justino/MascotaTribunalElectoral-04.png"];
-            let indice = 0;
-
-            setInterval(() => {
-                indice = (indice + 1) % imagenes.length;
-                document.getElementById("imagenRotativa").src = imagenes[indice];
-            }, 3000); // cambia cada 3 segundos
-        </script>-->
     </section>
 
     <section>
         <div class="col-md-12 my-5">
-            <div class="container-fluid mt-0 p-0">
-                <div class="section" id="carousel">
-                    <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel" data-interval="3000">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/Banner/Banner5.jpeg" alt="Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Banner/Banner1.jpeg" alt="Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Banner/Banner2.jpeg" alt="Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Banner/Banner3.jpeg" alt="Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Banner/Banner4.jpeg" alt="Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Banner/Banner6.jpeg" alt="Slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/Banner/Banner7.jpeg" alt="Slide">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Anterior</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Siguiente</span>
-                        </a>
-                    </div>
-                </div>
+            <div class="seccion-construccion">
+                <img src="https://cdn-icons-png.flaticon.com/512/5956/5956583.png" alt="Página en construcción">
+                <h1>Convocatorias de Sesiones Públicas</h1>
+                <p>Al día de hoy no se cuenta con convocatorias a sesiones públicas por realizar por parte del<br> Pleno del Tribunal Electoral del Estado de Aguascalientes.</p>
             </div>
         </div>
     </section>
 
-    <div class="col-md-12 col-lg-12">
-        <div class="custom-container my-5">
-            <div class="row g-3 justify-content-center">
-                <!-- Seis cajas pequeñas -->
-                <div class="col-md-12">
-                    <div class="row g-3 text-center">
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="custom-box box-1">
-                                <a href="https://teeags.mx/category/estrados-electronicos/">
-                                    <img src="images/Medios/EstradosElectronicosFinal.png" width="200" height="200" />
-                                </a>
-                            </div>
-                            <br />
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="custom-box box-3">
-                                <a href="https://teeags.mx/category/pleno/sesiones-publicas/">
-                                    <img src="images/Medios/Sesiones2.png" width="200" height="200" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="custom-box box-2">
-                                <a href="https://teeags.mx/lista-de-acuerdos/"><img src="images/Medios/ListaAcuerdos.png" width="200" height="200" /></a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="custom-box box-4">
-                                <a href="#"><img src="images/Medios/Sentencias2.png" width="200" height="200" /></a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="custom-box box-2">
-                                <a href="https://teeags.mx/gaceta-informativa-por-ano/"><img src="images/Medios/Gaceta3.png" width="200" height="200" /></a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <div class="custom-box box-3">
-                                <a href="https://teeags.mx/boletines-de-prensa-por-ano/"><img src="images/Medios/Boletines.png" width="200" height="200" /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="col-md-12 col-lg-12">
+    <div class="col-12 col-sm-6 col-lg-12">
         <!-- Footer -->
         <footer class="footer pt-5">
             <div class="container text-center text-md-start col-md-10">
@@ -931,7 +677,6 @@
                             Juan de Montoro # 407
                             Col. Centro, C.P. 20000
                             Aguascalientes, Ags.
-                            contacto@teeags.mx
                         </p>
                         <h6 class="fw-bold" style="color: #CCCCCC; font-weight: bold; font-size: 14pt;">Horario</h6>
                         <p style="color: white; font-size: 11pt;">
@@ -1036,12 +781,13 @@
                 </div>
                 <!-- Copyright -->
                 <div class="text-center pb-4">
-                    © 2025 Copyright: <a href="http://www.teeags.mx" class="text-white text-decoration-none">TEEA.mx</a>
+                    © 2025 Copyright: <a href="#" class="text-white text-decoration-none">TEEA.mx</a>
                 </div>
             </div>
         </footer>
         <!-- End Footer -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </div>
+
 </body>
 </html>
